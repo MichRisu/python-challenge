@@ -70,12 +70,12 @@ with open(csvpath) as csvfile:
 
 # * In addition, your final script should both print the analysis to the terminal and export 
 # a text file with the results. 
-    # file = open('analysis.txt', 'w')
-    # file.write("Financial Analysis")
-    # file.write("---------------------------")
-    # file.write(f"Total Months: {total_months}")
-    # file.write(f"Total: ${net_total}")
-    # file.write(f"Average Change: ${average_changes}")
-    # file.write(f"Greatest Increase in Profits: {max_month} (${max_profits})")
-    # file.write(f"Greatest Decrease in Profits: {min_month} (${min_losses})")
-    # file.close()
+    file = open('analysis.txt', 'w')
+    file.write("Financial Analysis")
+    file.write("---------------------------")
+    file.write(f"Total Months: {total_months}")
+    file.write(f"Total: ${net_total}")
+    file.write(f"Average Change: ${average_changes}")
+    file.write(f"Greatest Increase in Profits: {max_month} (${max_profits})")
+    file.write(f"Greatest Decrease in Profits: {min_month} (${min_losses})")
+    file.close()
