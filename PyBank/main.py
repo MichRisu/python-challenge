@@ -49,12 +49,12 @@ with open(csvpath) as csvfile:
     print(f"Greatest Decrease in Profits: {min_month} (${min_losses})")
     
     # Output to file
-    file = open('Financial_Analysis.txt', 'w')
-    file.write("Financial Analysis")
-    file.write("---------------------------")
-    file.write(f"Total Months: {total_months}")
-    file.write(f"Total: ${net_total}")
-    file.write(f"Average Change: ${average_changes}")
-    file.write(f"Greatest Increase in Profits: {max_month} (${max_profits})")
-    file.write(f"Greatest Decrease in Profits: {min_month} (${min_losses})")
-    file.close()
+
+    with open('Financial Analysis.txt', 'w') as text_file:
+        print("Financial Analysis", file=text_file)
+        print("---------------------------", file=text_file)
+        print(f"Total Months: {total_months}", file=text_file)
+        print(f"Total: ${net_total}", file=text_file)
+        print(f"Average Change: ${average_changes}", file=text_file)
+        print(f"Greatest Increase in Profits: {max_month} (${max_profits})", file=text_file)
+        print(f"Greatest Decrease in Profits: {min_month} (${min_losses})", file=text_file)
