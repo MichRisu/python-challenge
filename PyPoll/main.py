@@ -61,14 +61,14 @@ print(f"Winner: {winning_candidate}")
 print("---------------------------")
 
 # Output text to file.
-file = open('Election_Results.txt', 'w')
-file.write("Election Results")
-file.write("---------------------------")
-file.write(f"Total Votes: {(total_votes)}")
-file.write("---------------------------")
-for i in range(len(candidates)):
-    file.write(f"{candidates[i]}: {(percent_votes[i])} ({(vote_number[i])})")
-file.write("---------------------------")
-file.write(f"Winner: {winning_candidate}")
-file.write("---------------------------")
-file.close()
+with open('Election_Results.txt', 'w') as text_file:
+    print("Election Results", file=text_file)
+    print("---------------------------", file=text_file)
+    print(f"Total Votes: {(total_votes)}", file=text_file)
+    print("---------------------------", file=text_file)
+    # Use range to print each candidate
+    for i in range(len(candidates)):
+        print(f"{candidates[i]}: {(percent_votes[i])} ({(vote_number[i])})", file=text_file)
+    print("---------------------------", file=text_file)
+    print(f"Winner: {winning_candidate}", file=text_file)
+    print("---------------------------", file=text_file)
